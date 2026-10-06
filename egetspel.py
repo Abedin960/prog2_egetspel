@@ -1,10 +1,25 @@
 class fordon:
-    def __init__(self, märke,växelda, årdsmodell, hästkraf ):
+    def __init__(self, märke,växelda, årdsmodell, hästkraft ):
         self.märke = märke
         self.växelåda = växelda
         self.årsmodell = årdsmodell
-        self.hästkraft = hästkraf
-class bil (fordon):
-    def __init__(self, märke, växelda, årdsmodell, hästkraf, antal_dörrar):
-        super().__init__(märke, växelda, årdsmodell, hästkraf)
-        self.antal_dörrar = antal_dörrar 
+        self.hästkraft = hästkraft
+    def kör(self):
+        print("fordonet körs")
+
+
+class bil(fordon):
+    def __init__(self, märke, växelda, årdsmodell, hästkraft, antal_dörrar):
+        super().__init__(märke, växelda, årdsmodell, hästkraft)
+        self.antal_dörrar = antal_dörrar
+
+    def kör(self):
+        print("Bilen kör snabbt")
+
+class lastbil(fordon):
+    def __init__(self, märke, växelda, årdsmodell, hästkraft, lastkapacitet):
+        super().__init__(märke, växelda, årdsmodell, hästkraft)
+        self.lastkapacitet = lastkapacitet
+
+    def kör(self):
+        print("lastbilen kör långsamt")
