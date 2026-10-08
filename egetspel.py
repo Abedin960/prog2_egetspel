@@ -1,3 +1,6 @@
+from typing import Self
+
+
 class fordon:
     def __init__(self, märke,växelda, årdsmodell, hästkraft ):
         self.märke = märke
@@ -22,4 +25,21 @@ class lastbil(fordon):
         self.lastkapacitet = lastkapacitet
 
     def kör(self):
-        print("lastbilen kör långsamt")
+        print("lastbilen kör långsamt") 
+
+class spel:
+    def __init__(self, bil, motståndare):
+        self.bil = bil 
+        self.motståndare = motståndare
+
+    def starta(self):
+        print("=== Bil Race ===")
+        print(" Du kör")
+        self.bil.kör()
+
+print("Din motståndet kör:")
+self.motståndare.kör()
+
+print("race börjar nu!")
+
+val = input ("vill du köra eller lastbilen? (bil/lastbil): ")
