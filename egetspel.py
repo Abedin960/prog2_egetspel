@@ -37,9 +37,26 @@ class spel:
         print(" Du kör")
         self.bil.kör()
 
-print("Din motståndet kör:")
-self.motståndare.kör()
+    print ("Din motståndare kör:")
+    
+    
+    print("Race börjar nu! ")
 
-print("race börjar nu!")
 
 val = input ("vill du köra eller lastbilen? (bil/lastbil): ")
+
+if val =="bil":  
+    mitt_fordon = bil ("Bmw", "manuell", 2018, 280, 6)
+elif val == "lastbil":
+    mitt_fordon = lastbil("Volvo", "automat", 2020, 500, 20000) 
+else:
+    print("Fel val!")
+    exit()
+motståndare = bil ("Mercedes", "automat", 2017, 240, 5)
+
+mitt_spel = spel(mitt_fordon, motståndare)
+mitt_spel.starta()
+
+
+
+
